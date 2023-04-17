@@ -1,0 +1,43 @@
+@import "../../global.scss";
+.contact{
+    background-color: #2879fe;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    .wrapper{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            width: 100%;
+            flex-direction: column;
+            gap: 15px;    
+        }
+        span{
+            @include mobile{
+                display: none;
+            }
+        }
+
+        input{
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 0px 5px 5px 0;
+            background-color: #333;
+            color: white;
+        }
+        .icons{
+            display: flex;
+            gap:10px
+        }
+    }
+    
+
+}

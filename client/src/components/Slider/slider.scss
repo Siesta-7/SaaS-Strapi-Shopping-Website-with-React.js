@@ -1,0 +1,75 @@
+@import "../../global.scss";
+
+.slider{
+    height: calc(100vh - 70px);
+    width: 100vw;
+    position: relative;
+
+    @include mobile{
+        height: calc(45vh - 55px);
+        
+    }
+
+    .container{
+        height: 100%;
+        width: 300vw;
+        display: flex;
+        transition: all 1s ease;
+
+        img{
+            width: 100vw;
+            height: 100%;
+            object-fit:cover;  
+        }
+    }
+
+      .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top:0;
+        bottom:0;
+        margin: auto;
+
+        @include mobile{
+            height: 40px;
+            width: 40px;
+        }
+
+        &.left{
+            left: 5%;
+        }
+        &.invisible{
+            display: none;
+        }
+        &.right{
+            right:5%
+        }
+
+        .icon{
+            color: bisque;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            animation: arrow 1.5s infinite;
+            @keyframes arrow {
+                from{
+                    opacity: 0.5;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+     
+            
+        
+        
+}
+    
+    
+    

@@ -1,0 +1,90 @@
+@import "../../global.scss";
+.card{
+    width: 180px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    
+    @include mobile{
+        width: 175px;
+        justify-content: space-evenly;
+        height: 300px;
+    }
+
+    .image{
+        width: 100%;
+        height: 80%;   
+        position: relative;
+        
+        @include mobile{
+            height: 240px;
+        }
+
+        &:hover{
+            .secondImg{
+                z-index: 2;
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+        .mainImg{
+            z-index: 1;
+
+        }
+    }
+    
+        span{
+            position: absolute;
+            top:5px;
+            left:5px;
+            z-index: 3;
+            background-color: white;
+            color: teal;
+            padding: 2px 4px;
+            font-weight: 500;
+            font-size: 11px;
+            @include mobile{
+                top: 90%;
+            }
+        }  
+    
+    h2{
+        font-size: 15px;
+        font-weight: 400;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+
+        @include mobile{
+            font-size: 12px;
+        }
+       
+        
+    }
+    .prices{
+        display: flex;
+        gap:15px;
+        
+        h3{
+            font-size: 16px;
+            font-weight: 500;
+            
+            @include mobile{
+                font-size: 14px;
+                
+            }
+
+        &:first-child{
+            text-decoration: line-through;
+            color: gray;
+        }
+        }
+    }
+}

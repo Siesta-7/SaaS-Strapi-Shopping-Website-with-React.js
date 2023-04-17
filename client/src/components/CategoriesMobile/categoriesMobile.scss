@@ -1,0 +1,70 @@
+@import "../../global.scss";
+
+.categoryMobile{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    .cat{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        
+
+       div{
+        display: flex;
+        height: 33%;
+        gap: 10px;
+       
+       }
+        .row{
+            
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+            gap: 10px;
+             &:hover{
+                span{
+                    opacity: 1;
+                }
+             }
+        
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            position: relative;
+            &:hover{               
+                transform: scale(1.1);                
+            }  
+                                           
+        }
+        span{
+            background-color: white;
+            opacity: 0.8;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom:5%;
+            left:5%;
+            width: fit-content;           
+            border: none;
+            color: rgb(241, 149, 9);         
+            text-transform: uppercase;
+            font-style: italic;
+            font-weight: 800;    
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+}
+}
+

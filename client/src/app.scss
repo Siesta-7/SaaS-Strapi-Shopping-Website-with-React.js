@@ -1,0 +1,12 @@
+@import "./global.scss";
+.app{
+   
+    @include mobile{
+        overflow-x: hidden;
+    }
+    .link{
+        color: inherit;
+        text-decoration: none;
+        
+    }
+}

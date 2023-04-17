@@ -1,0 +1,89 @@
+@import "../../global.scss";
+
+.featuredProducts{
+    margin: 50px 60px;
+    position: relative;
+        
+    @include mobile{
+        margin: 0px;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        @include mobile{
+            flex-direction: column;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        h1{
+            flex: 2;
+            text-transform: capitalize;
+        }
+        p{
+            flex:3;
+            color: gray;
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+    .bottom{
+        display: flex;         
+        overflow: hidden;
+        margin: 0 63px;
+
+        &.secondPage{
+                .backIcon{
+                    visibility: visible;
+                }
+                .forwardIcon{
+                    visibility: hidden;
+                }
+        }
+
+        @include mobile{
+            margin: 10px;
+        }
+
+          .container{
+            width: 100vw;
+            display: flex;
+            gap: 20px;
+            transition: all 1s ease;
+            
+            @include mobile{
+                overflow-x: auto;
+            }
+        
+        }
+        .icon{
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            font-size: 30px;
+            cursor: pointer;
+            @include mobile{
+                display: none;
+            }
+        }
+        .backIcon{    
+            left:  10px; 
+            visibility: hidden;      
+        }
+        .forwardIcon{     
+            right:  10px;
+        }
+        
+    }
+
+}
